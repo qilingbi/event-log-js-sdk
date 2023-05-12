@@ -3,11 +3,11 @@ import { v4 as uuidv4 } from 'uuid';
 
 export class EchoLog{
     constructor(config: EchoLogConfig){
-        console.log('配置:', config);
+        console.log('config:', config);
     }
     $emit (option: EchoLogOption): Promise<string> {
         return new Promise((resolve, reject) => {
-            console.log('上一个事件id', option.eventId);
+            console.log('before evetnt id', option.eventId);
             const eventId = uuidv4();
             if (false) {
                 reject(0);
